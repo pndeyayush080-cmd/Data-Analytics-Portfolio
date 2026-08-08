@@ -29,7 +29,7 @@
 ---
 
 ### Interactive Story – Academic View
-![Interactive Story Academic View](Images/Interactive-Story%20Academic%20View.png)
+![Interactive Story Academic View](Images/Interactive-Story%20Academc%20View.png)
 
 ---
 
