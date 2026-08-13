@@ -96,7 +96,7 @@ All SQL queries used in this project are available inside the **SQL Scripts** fo
 
 The complete project report including SQL queries and output tables is available here:
 
-**CREATE DATABASE retail.docx**
+**Retail Store SQL Analysis Report.docx**
 
 ---
 
