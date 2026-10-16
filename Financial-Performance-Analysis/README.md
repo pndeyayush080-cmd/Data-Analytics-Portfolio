@@ -70,6 +70,18 @@ The project follows a structured analytics workflow, from data loading and clean
 - `DATA_QUALITY_LOG.csv` — Data quality log
 - Dashboard screenshots — Visual documentation
 
+- ### 🖼️ Dashboard Preview
+
+The screenshots below showcase the financial performance dashboard and its visual analysis.
+
+![Financial Performance Dashboard — Overview](./Screenshot%202026-10-16%20220905.png)
+
+![Financial Performance Dashboard — Analysis View](./Screenshot%202026-10-16%20220921.png)
+
+![Financial Performance Dashboard — KPI View](./Screenshot%202026-10-16%20221037.png)
+
+![Financial Performance Dashboard — Additional View](./Screenshot%202026-10-16%20221048.png)
+
 ### 📈 Key Analysis Areas
 - Financial KPI evaluation
 - Data quality and transaction validation
