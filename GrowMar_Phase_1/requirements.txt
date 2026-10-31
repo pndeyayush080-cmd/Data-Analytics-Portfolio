@@ -1,0 +1,7 @@
+pandas
+openpyxl
+pandera
+python-dotenv
+streamlit
+plotly
+duckdb

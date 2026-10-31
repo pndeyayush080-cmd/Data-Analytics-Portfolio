@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1010" viewBox="0 0 1600 1010" role="img" aria-labelledby="title desc">
+  <title id="title">Growmar Task 2 warehouse star schema</title>
+  <desc id="desc">Dimensions and fact tables in the Growmar warehouse schema. Lines represent declared validated relationships.</desc>
+  <style>
+    .title { font: 700 30px Arial, sans-serif; fill: #17324d; }
+    .subtitle { font: 16px Arial, sans-serif; fill: #50677c; }
+    .box { stroke-width: 2; rx: 12; }
+    .dim { fill: #e5f2ff; stroke: #2774ae; }
+    .fact { fill: #eff8ec; stroke: #4e8b45; }
+    .head { font: 700 17px Arial, sans-serif; fill: #17324d; }
+    .body { font: 13px Arial, sans-serif; fill: #334e68; }
+    .edge { stroke: #75879a; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .note { font: 12px Arial, sans-serif; fill: #526d82; }
+  </style>
+  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#75879a"/></marker></defs>
+  <rect width="1600" height="1010" fill="#fbfdff"/>
+  <text x="70" y="55" class="title">Growmar Phase 1 — Task 2 Warehouse Schema</text>
+  <text x="70" y="82" class="subtitle">7 dimensions • 11 facts • relationship lines show validated dimensional joins</text>
+
+  <path class="edge" d="M285 175 L480 175"/><path class="edge" d="M285 310 L480 310"/><path class="edge" d="M285 445 L480 445"/>
+  <path class="edge" d="M720 175 L865 175"/><path class="edge" d="M720 310 L865 310"/><path class="edge" d="M720 445 L865 445"/>
+  <path class="edge" d="M1110 175 L1270 175"/><path class="edge" d="M1110 310 L1270 310"/><path class="edge" d="M1110 445 L1270 445"/>
+  <path class="edge" d="M285 580 L480 580"/><path class="edge" d="M720 580 L865 580"/><path class="edge" d="M1110 580 L1270 580"/>
+
+  <g transform="translate(70,120)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_date</text><text x="16" y="58" class="body">PK: date_key</text><text x="16" y="80" class="body">calendar date</text></g>
+  <g transform="translate(70,255)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_department</text><text x="16" y="58" class="body">PK: department_id</text></g>
+  <g transform="translate(70,390)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_employee</text><text x="16" y="58" class="body">PK: employee_key</text><text x="16" y="80" class="body">SCD Type 2</text></g>
+  <g transform="translate(70,525)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_role</text><text x="16" y="58" class="body">PK: role_id</text></g>
+  <g transform="translate(70,660)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_leave_type</text><text x="16" y="58" class="body">PK: leave_type_code</text></g>
+  <g transform="translate(70,795)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_team</text><text x="16" y="58" class="body">PK: team_id</text></g>
+  <g transform="translate(330,795)"><rect class="box dim" width="215" height="110"/><text x="16" y="31" class="head">dim_sprint</text><text x="16" y="58" class="body">PK: sprint_id</text></g>
+
+  <g transform="translate(480,120)"><rect class="box fact" width="240" height="110"/><text x="16" y="31" class="head">fact_payroll</text><text x="16" y="57" class="body">PK: payroll_item_id</text><text x="16" y="79" class="body">employee, date, dept, role</text></g>
+  <g transform="translate(480,255)"><rect class="box fact" width="240" height="110"/><text x="16" y="31" class="head">fact_attendance_monthly</text><text x="16" y="57" class="body">PK: attendance_fact_id</text><text x="16" y="79" class="body">employee, date, dept</text></g>
+  <g transform="translate(480,390)"><rect class="box fact" width="240" height="110"/><text x="16" y="31" class="head">fact_leave</text><text x="16" y="57" class="body">PK: leave_request_id</text><text x="16" y="79" class="body">employee, leave type, dates</text></g>
+  <g transform="translate(480,525)"><rect class="box fact" width="240" height="110"/><text x="16" y="31" class="head">fact_headcount_monthly</text><text x="16" y="57" class="body">PK: date_key + department_id</text></g>
+  <g transform="translate(480,660)"><rect class="box fact" width="240" height="110"/><text x="16" y="31" class="head">fact_ledger</text><text x="16" y="57" class="body">PK: line_id</text><text x="16" y="79" class="body">date, optional department</text></g>
+  <g transform="translate(480,795)"><rect class="box fact" width="240" height="110"/><text x="16" y="31" class="head">fact_invoice / fact_expense</text><text x="16" y="57" class="body">PK: invoice_id / expense_id</text><text x="16" y="79" class="body">date; expense also department</text></g>
+
+  <g transform="translate(865,120)"><rect class="box fact" width="245" height="110"/><text x="16" y="31" class="head">fact_forecast</text><text x="16" y="57" class="body">PK: forecast_id</text><text x="16" y="79" class="body">forecast month date</text></g>
+  <g transform="translate(865,255)"><rect class="box fact" width="245" height="110"/><text x="16" y="31" class="head">fact_attrition_risk</text><text x="16" y="57" class="body">PK: prediction_id</text><text x="16" y="79" class="body">employee, date, department</text></g>
+  <g transform="translate(865,390)"><rect class="box fact" width="245" height="110"/><text x="16" y="31" class="head">fact_task</text><text x="16" y="57" class="body">PK: task_id</text><text x="16" y="79" class="body">team, sprint, employee</text></g>
+  <g transform="translate(865,525)"><rect class="box fact" width="245" height="110"/><text x="16" y="31" class="head">fact_anomaly</text><text x="16" y="57" class="body">PK: result_id</text><text x="16" y="79" class="body">period date, employee</text></g>
+
+  <g transform="translate(1270,120)"><rect class="box dim" width="245" height="110"/><text x="16" y="31" class="head">Relationship validation</text><text x="16" y="57" class="body">Non-null orphan keys: 38</text><text x="16" y="79" class="body">Null foreign keys: 6,032</text></g>
+  <g transform="translate(1270,255)"><rect class="box dim" width="245" height="110"/><text x="16" y="31" class="head">Reconciliation</text><text x="16" y="57" class="body">18 of 18 tables reconcile</text><text x="16" y="79" class="body">Raw schema unchanged</text></g>
+  <text x="70" y="960" class="note">Source: warehouse schema built by src/build_star_warehouse.py. See task2_validation_findings.md for documented exceptions.</text>
+</svg>

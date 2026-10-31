@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.duckdb
+*.duckdb.wal
+.env
+.env.*
+!.env.example
+
+# Local and generated data
+data/
+
+src/*.bak
