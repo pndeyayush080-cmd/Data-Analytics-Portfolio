@@ -1,0 +1,8 @@
+duckdb>=1.0
+pandas>=2.0
+streamlit>=1.35
+plotly>=5.20
+openpyxl>=3.1
+reportlab>=4.0
+fastapi>=0.110
+uvicorn>=0.29

@@ -1,0 +1,171 @@
+# Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Database
+*.duckdb
+*.duckdb_data
+*.duckdb_wal
+*.sqlite
+*.sqlite3
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Data files
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.orc
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.keras
+*.onnx
+
+# Logs and reports
+*.log
+*.log.*
+*.report
+*.reports
+
+# Configuration
+.env*
+*.yaml
+*.yml
+settings.local.json
+
+# Documentation
+*.md
+README.md
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# System files
+*.swp
+*.swo
+*~
+
+# Kerberos
+ticket.cache
+
+# AWS
+*.pem
+aws_credentials.json
+
+# Secrets
+*.secret
+*.secrets
+*key*
+*password*
+
+# CI/CD
+.github/
+.gitlab/
+circleci/
+.*.swp
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+.DS_Store
+
+# Performance
+profraw/
+prof
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# IDE settings
+*.iml
+
+# Eclipse
+.project
+.pydevproject
+
+# Node.js
+node_modules/
+
+# Terraform
+*.tf
+*.tfvars
+
+# Docker
+Dockerfile
+.Dockerfile
+.dockerignore
+
+# Archive files
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# System temporary files
+/proc/*
+/etc/*
+/var/*
+/run/*
+
+# User-defined exclusions
+# Add specific patterns below this line
+
+# Environment variables (if any)
+export PYTHONPATH=/path/to/python
+export DATABASE_URL=postgresql://...
+
+# Sensitive data patterns
+sensitive_data_*
+password_*
+api_key_*
+# Allow project documentation and reports
+!README.md
+!**/*.md
