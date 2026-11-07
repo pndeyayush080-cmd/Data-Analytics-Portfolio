@@ -1,27 +1,55 @@
-# 📊 Data Analytics Portfolio
+﻿# Data Analytics Portfolio
 
-Welcome to my Data Analytics Portfolio! This repository showcases my practical projects in data analysis, business intelligence, data visualization, SQL, Python, and Power BI.
+Welcome to my Data Analytics Portfolio! This repository showcases practical projects in Data Analytics, Business Intelligence, data visualization, SQL, Python, and Power BI.
 
-I enjoy transforming raw data into meaningful insights that support data-driven business decisions.
+I enjoy transforming raw data into meaningful insights that support informed, data-driven business decisions.
 
-## 👨‍💻 About Me
+## About Me
 
-I am an aspiring Data Analyst with a Mechanical Engineering background and industry experience. I am developing my analytics skills through practical projects involving data cleaning, exploratory data analysis, SQL querying, statistical analysis, and dashboard development.
+I am an aspiring Data Analyst with a Mechanical Engineering background and industry experience. I am developing my analytics skills through hands-on projects involving data cleaning, exploratory data analysis, SQL, Python, business intelligence, and dashboard development.
 
 **Career Interests:** Data Analyst | Business Intelligence Analyst | Reporting Analyst
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 - **Microsoft Excel:** Data cleaning, PivotTables, lookup functions, KPI reporting
-- **SQL:** Data querying, joins, aggregations, validation, business analysis
+- **SQL:** Queries, joins, aggregations, data validation, business analysis
 - **Python:** Pandas, NumPy, Jupyter Notebook, exploratory data analysis
 - **Power BI:** Interactive dashboards, data visualization, DAX
 - **Statistics:** Descriptive statistics, hypothesis testing, statistical interpretation
 - **Other Skills:** Data quality validation, business analysis, reporting, data storytelling
 
-## 📁 Featured Projects
+## GrowMar - Aura Workforce Analytics Project
 
-### 1. Financial Performance Analysis — Capstone Project
+An end-to-end workforce analytics project involving data engineering, data quality validation, SQL analytics, business intelligence, and interactive dashboards.
+
+The project is organized into phases:
+
+### Phase 1 - Workforce Analytics Foundation
+
+Initial data analysis, data processing, data quality checks, analytics preparation, and dashboard development.
+
+[Explore Phase 1](./phase-1/)
+
+### Phase 2 - Data Quality and Analytics
+
+Data auditing, validation, transformation, and analytical deliverables.
+
+[Explore Phase 2](./phase-2/)
+
+### Phase 3 - Advanced Business Intelligence
+
+Advanced analytics covering profitability, invoices, receivables, cross-department insights, AI-assisted signals, and executive company-health reporting.
+
+[Explore Phase 3](./phase-3/)
+
+### Phase 4 - Upcoming
+
+Phase 4 deliverables will be added to this same repository after the official release and completion.
+
+## Other Featured Projects
+
+### 1. Financial Performance Analysis - Capstone Project
 
 An end-to-end financial analytics project focused on financial KPIs, data quality validation, transaction analysis, statistical investigation, and Power BI reporting.
 
@@ -35,9 +63,7 @@ An end-to-end financial analytics project focused on financial KPIs, data qualit
 - Conducted statistical analysis and documented findings.
 - Prepared a Power BI dashboard and final project reports.
 
-**Deliverables:** Python notebooks, SQL scripts, Excel dataset, data quality log, Power BI dashboard, PDF report, Markdown report, and screenshots.
-
-➡️ [**Explore Financial Performance Analysis →**](./Financial-Performance-Analysis/)
+[Explore Financial Performance Analysis](./Financial-Performance-Analysis/)
 
 ### 2. Student Social Media Usage Analytics Dashboard
 
@@ -45,9 +71,7 @@ A Power BI project focused on exploring student social media usage patterns and 
 
 **Tools:** Power BI, Data Visualization, Dashboard Design
 
-**Project Folder:** `Power BI`
-
-➡️ [**Explore Power BI Projects →**](./Power%20BI/)
+[Explore Power BI Projects](./Power%20BI/)
 
 ### 3. Retail Store SQL Analysis
 
@@ -55,11 +79,9 @@ A SQL-based project focused on analyzing retail store data and answering busines
 
 **Tools:** SQL, Data Analysis, Business Reporting
 
-**Project Folder:** `SQL/Retail Store SQL Analysis`
+[Explore Retail Store SQL Analysis](./SQL/Retail%20Store%20SQL%20Analysis/)
 
-➡️ [**Explore Retail Store SQL Analysis →**](./SQL/Retail%20Store%20SQL%20Analysis/)
-
-## 🔄 My Data Analysis Workflow
+## My Data Analysis Workflow
 
 1. Understand business requirements and define KPIs.
 2. Inspect datasets and assess data quality.
@@ -70,19 +92,18 @@ A SQL-based project focused on analyzing retail store data and answering busines
 7. Interpret findings and develop recommendations.
 8. Communicate results through reports and presentations.
 
-## 🎯 Current Learning Goals
+## Current Learning Goals
 
 - Strengthening SQL and Python problem-solving skills.
 - Building interactive Power BI dashboards.
 - Improving statistical analysis and business interpretation.
-- Developing practical analytics projects and portfolio documentation.
-- Expanding knowledge of AI and Machine Learning.
+- Developing practical analytics projects.
+- Expanding knowledge of Artificial Intelligence and Machine Learning.
 
-## 📬 Connect With Me
+## Connect With Me
 
 - **GitHub:** [pndeyayush080-cmd](https://github.com/pndeyayush080-cmd)
 
 Thank you for visiting my portfolio!
 
-I am continuously learning and building projects to improve my data analytics skills.
-
+I am continuously learning and building projects to strengthen my data analytics and business intelligence skills.
