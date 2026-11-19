@@ -23,7 +23,8 @@ wheels/
 
 # Logs and reports (generated)
 logs/
-reports/
+reports/*
+!reports/Day_18_Self_Service_KPI_Explorer_Guide.md
 *.log
 
 # Snapshots
