@@ -24,6 +24,10 @@ wheels/
 *.duckdb
 *.duckdb_data
 *.duckdb_wal
+
+# Exception: deployment databases (sanitized, PII-free) are tracked
+!pulseiq_deployment.duckdb
+!pulseiq_public.duckdb
 *.sqlite
 *.sqlite3
 

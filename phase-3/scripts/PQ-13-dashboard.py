@@ -44,7 +44,7 @@ WAREHOUSE_PATH = (
     SCRIPT_DIR.parent
     / "data"
     / "warehouse"
-    / "pulseiq_clean.duckdb"
+    / "pulseiq_public.duckdb"
 )
 
 TABLE_NAME = "star_schema.dept_month_combined"
@@ -974,6 +974,12 @@ def main():
     st.markdown(
         "**Department-Month Analytics** | "
         "Headcount • Payroll • Attendance • Leave"
+    )
+
+    st.info(
+        "Small-group departments with fewer than five employees are excluded "
+        "from published departmental metrics to protect employee privacy. "
+        "Reported totals reflect eligible published departments only."
     )
 
     # --------------------------------------------------------
