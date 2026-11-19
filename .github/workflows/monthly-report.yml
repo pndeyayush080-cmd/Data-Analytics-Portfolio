@@ -1,0 +1,86 @@
+name: Monthly Report Generation
+
+on:
+  schedule:
+    # Run on the 1st of every month at 6:00 UTC
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Report month (e.g., 2026-09)'
+        required: false
+        type: string
+      snapshot:
+        description: 'Use snapshot data (for testing without DB)'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          cd phase-4
+          pip install -r requirements.txt
+      
+      - name: Generate report (with database)
+        if: ${{ !github.event.inputs.snapshot }}
+        env:
+          # Add any database connection secrets here if needed
+          DB_PATH: ${{ secrets.DUCKDB_PATH }}
+        run: |
+          cd phase-4
+          if [ -n "${{ github.event.inputs.month }}" ]; then
+            python run_report.py --month "${{ github.event.inputs.month }}" --format pdf excel
+          else
+            # Default to previous month
+            python run_report.py --month "$(date -d 'last month' +%Y-%m)" --format pdf excel
+          fi
+      
+      - name: Generate report (with snapshot)
+        if: ${{ github.event.inputs.snapshot }}
+        run: |
+          cd phase-4
+          if [ -n "${{ github.event.inputs.month }}" ]; then
+            python run_report.py --month "${{ github.event.inputs.month }}" --snapshot-dir ../snapshot --format pdf excel
+          else
+            python run_report.py --month "$(date -d 'last month' +%Y-%m)" --snapshot-dir ../snapshot --format pdf excel
+          fi
+      
+      - name: Upload PDF report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulseiq-report-pdf
+          path: phase-4/reports/*.pdf
+          retention-days: 90
+      
+      - name: Upload Excel report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulseiq-report-excel
+          path: phase-4/reports/*.xlsx
+          retention-days: 90
+      
+      - name: Create release (on tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            phase-4/reports/*.pdf
+            phase-4/reports/*.xlsx
+          generate_release_notes: true
