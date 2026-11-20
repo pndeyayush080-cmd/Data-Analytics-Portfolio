@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pulseiq-metrics-api
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "cd phase-4 && pip install -r requirements.txt && mkdir -p src/api && curl -fsSL -o src/api/pulseiq_api.duckdb 'https://github.com/pndeyayush080-cmd/Data-Analytics-Portfolio/releases/download/db-v1.0/pulseiq_api.duckdb'"
+    startCommand: "cd phase-4 && uvicorn src.api.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: API_KEY
+        sync: false
