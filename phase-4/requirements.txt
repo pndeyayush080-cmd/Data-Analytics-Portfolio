@@ -6,3 +6,8 @@ pytest==9.2.0
 python-dateutil==3.0.0
 numpy==2.5.4
 pillow==13.0.0
+fastapi==0.115.0
+uvicorn==0.32.0
+pydantic==2.14.4
+pydantic-core==2.50.5
+httpx==0.28.0
